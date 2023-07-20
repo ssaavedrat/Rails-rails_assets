@@ -1,24 +1,29 @@
-# README
+# Rails - Assets Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Repositorio de ejemplo assets usando Rails.
 
-Things you may want to cover:
+## Pasos
 
-* Ruby version
+A continuación, se detalla un paso a paso para la creación de este proyecto.
 
-* System dependencies
+- Creación de proyecto
 
-* Configuration
+```bash
+rails new rails_assets
+```
 
-* Database creation
+- Agregamos un archivo de imagen a `app/assets/images/ImagenDeApoyo.jpg`
 
-* Database initialization
+- Con el generador de rails, creamos un controlador **pages** para manejar las vistas del portafolio. Asignamos, además, una vista **index**
 
-* How to run the test suite
+```bash
+rails g controller pages index
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+- Convertimos a index en el root por defecto.
+  
+- Agregamos `ImagenDeApoyo.jpg` de dos formas:
+    1. HTML "manual"
+    2. Helper `img_tag` a `index.html.erb`
 
-* Deployment instructions
-
-* ...
+- Agregamos la hoja de estilos en `app/assets/stylesheets/estilos.css` ajustando el tamaño de la imagen
